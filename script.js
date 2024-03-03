@@ -20,7 +20,8 @@ function validateEmail() {
     const matches = emailInput.value.match(emailPattern);
     if (emailInput.value.length < 3 || matches === null) {
         emailError.innerHTML = "Please enter a valid email"; 
-        emailInput.style.borderColor = "#f00c0c";  
+        emailInput.style.borderColor = "#f00c0c"; 
+        emailError.style.color="#39eb02";
         return false;
     } else {
         emailError.innerHTML = "";
