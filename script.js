@@ -43,17 +43,11 @@ function confirmation(){
         event.preventDefault(); //prevent from auto refresh
         
         if(confirm("Are you sure to proceed ?")){
-            alert("Successful Signup!")
-            clearInputValues();// Clear input values
+            alert("Successful Signup!");
+            window.location.reload();
         } else {
             alert("Signup Cancelled");
-            clearInputValues(); // Clear input values
         }
     }
 }
-// Resetting the values of input to empty.
-function clearInputValues() {
-    // Clear input values
-    emailInput.value = "";
-    passwordInput.value = "";
-}
+
