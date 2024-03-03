@@ -40,3 +40,18 @@ function validatePassword(){
     }
 }
 
+// Confirmation of clicking the Submit button for Submission
+function confirmation(){
+    if(validatePassword() && validateEmail()){
+        event.preventDefault(); //prevent from auto refresh
+        
+        if(confirm("Are you sure to proceed ?")){
+            alert("Successful Signup!");
+            
+            window.location.reload();// 
+        } else {
+            alert("Signup Cancelled");
+            
+        }
+    }
+}
