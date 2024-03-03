@@ -29,6 +29,7 @@ body{
 }
 #email-error{
     display: block;
+    /* color: white; */
     margin-top: 10px;
     margin-left: 5px;
     font-size: 1.3rem;
@@ -50,6 +51,7 @@ body{
 }
 #password-error{
     display: block;
+    /* color: white; */
     margin-top: 10px;
     margin-left: 5px;
     font-size: 1.3rem; 
