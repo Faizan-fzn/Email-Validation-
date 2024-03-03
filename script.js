@@ -10,8 +10,8 @@ let passwordError = document.getElementById("password-error");
 let btn = document.getElementById("submit-button");
 
 //Event listeners for two input and a button.
-emailInput.addEventListener("keydown", validateEmail);
-passwordInput.addEventListener("keydown", validatePassword);
+emailInput.addEventListener("keyup", validateEmail);
+passwordInput.addEventListener("keyup", validatePassword);
 btn.addEventListener("click", confirmation);
 
 // Checking if email is valid or not?
@@ -29,26 +29,14 @@ function validateEmail() {
         return true;
     }
 }
+
 // Checking if password is valid or not?
 function validatePassword(){
     if(passwordInput.value.length > 8){
         passwordError.innerHTML = "All good to go!";
         passwordError.style.color = "#06ad03";
-        passwordInput.style.borderColor = "#39eb02";
+        passwordInput.style.borderColor = "#39eb02"; 
         return true;
-    }
-}
-// Confirmation of clicking the Submit button for Submission
-function confirmation(){
-    if(validatePassword() && validateEmail()){
-        event.preventDefault(); //prevent from auto refresh
-        
-        if(confirm("Are you sure to proceed ?")){
-            alert("Successful Signup!");
-            window.location.reload();
-        } else {
-            alert("Signup Cancelled");
-        }
     }
 }
 
