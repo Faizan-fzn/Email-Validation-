@@ -18,7 +18,7 @@ btn.addEventListener("click", confirmation);
 function validateEmail() {
     const emailPattern = /[@.].*[@.]/;
     const matches = emailInput.value.match(emailPattern);
-    if (emailInput.value.length < 3 || matches === null) {
+    if (emailInput.value.length <= 3 || matches === null) {
         emailError.innerHTML = "Please enter a valid email"; 
         emailInput.style.borderColor = "#f00c0c"; 
         emailError.style.color= "#f00c0c";
