@@ -47,11 +47,10 @@ function confirmation(){
         
         if(confirm("Are you sure to proceed ?")){
             alert("Successful Signup!");
-            
             window.location.reload();// 
         } else {
             alert("Signup Cancelled");
-            
+            window.location.reload();
         }
     }
 }
