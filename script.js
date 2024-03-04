@@ -37,6 +37,11 @@ function validatePassword(){
         passwordError.style.color = "#06ad03";
         passwordInput.style.borderColor = "#39eb02"; 
         return true;
+    } else {
+        passwordError.innerHTML = "Password should be more than 8 characters!";
+        passwordError.style.color= "#f00c0c";
+        passwordInput.style.borderColor = "#f00c0c";
+        return false;
     }
 }
 
